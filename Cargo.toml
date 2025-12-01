@@ -1,0 +1,123 @@
+[package]
+name = "AdventOfCode2024"
+version = "0.1.0"
+authors = ["Mateusz Kwapich <mateusz@kwapich.it>"]
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.94"
+btreemultimap = "0.1.1"
+maplit = "1.0.2"
+multiset = "0.0.5"
+regex = "1.11.1"
+itertools = "0.14.0"
+num-integer = "0.1.46"
+lazy_static = "1.5.0"
+text_io = "0.1.12"
+scan-rules = { version = "0.2.0", features = ["regex"] }
+mset = "0.1.1"
+indicatif = "0.18.3"
+serde_json = "1.0.133"
+serde = { version = "1.0.216", features = ["derive"] }
+smallset = "0.1.1"
+rayon = "1.10.0"
+radix_fmt = "1.0.0"
+num = "0.4.3"
+gray-codes = "0.1.1"
+multimap = "0.10.0"
+strum = { version = "0.27.2", features = ["derive"] }
+memoize = "0.5.1"
+fixedbitset = "0.5.7"
+
+[[bin]]
+name = "01a"
+path = "src/01a.rs"
+
+[[bin]]
+name = "01b"
+path = "src/01b.rs"
+
+[[bin]]
+name = "02a"
+path = "src/02a.rs"
+
+[[bin]]
+name = "02b"
+path = "src/02b.rs"
+
+[[bin]]
+name = "03a"
+path = "src/03a.rs"
+
+[[bin]]
+name = "03b"
+path = "src/03b.rs"
+
+[[bin]]
+name = "04a"
+path = "src/04a.rs"
+
+[[bin]]
+name = "04b"
+path = "src/04b.rs"
+
+[[bin]]
+name = "05a"
+path = "src/05a.rs"
+
+[[bin]]
+name = "05b"
+path = "src/05b.rs"
+
+[[bin]]
+name = "06a"
+path = "src/06a.rs"
+
+[[bin]]
+name = "06b"
+path = "src/06b.rs"
+
+[[bin]]
+name = "07a"
+path = "src/07a.rs"
+
+[[bin]]
+name = "07b"
+path = "src/07b.rs"
+
+[[bin]]
+name = "08a"
+path = "src/08a.rs"
+
+[[bin]]
+name = "08b"
+path = "src/08b.rs"
+
+[[bin]]
+name = "09a"
+path = "src/09a.rs"
+
+[[bin]]
+name = "09b"
+path = "src/09b.rs"
+
+[[bin]]
+name = "10a"
+path = "src/10a.rs"
+
+[[bin]]
+name = "10b"
+path = "src/10b.rs"
+
+
+[[bin]]
+name = "11a"
+path = "src/11a.rs"
+
+[[bin]]
+name = "11b"
+path = "src/11b.rs"
+
+[[bin]]
+name = "12a"
+path = "src/12a.rs"
