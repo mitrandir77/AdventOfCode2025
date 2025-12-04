@@ -1,3 +1,5 @@
+// Advent of Code 2025
+// (c) 2025 Mateusz Kwapich
 use anyhow::Result;
 use itertools::Itertools;
 use regex::Regex;
