@@ -26,6 +26,10 @@ impl Map {
         self.buffer.get(p.y).and_then(|row| row.get(p.x).copied())
     }
 
+    pub fn set(&mut self, p: Point, val: u8) {
+        self.buffer[p.y][p.x] = val;
+    }
+
     pub fn neighbours(&self, p: Point) -> Vec<Point> {
         let (x, y) = (p.x as i64, p.y as i64);
         [
