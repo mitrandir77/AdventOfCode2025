@@ -1,0 +1,57 @@
+// Advent of Code 2025
+// (c) 2025 Mateusz Kwapich
+
+#[derive(Copy, Clone)]
+pub struct Point {
+    pub x: usize,
+    pub y: usize,
+}
+
+pub struct Map {
+    buffer: Vec<Vec<u8>>,
+    pub height: usize,
+    pub width: usize,
+}
+
+impl Map {
+    pub fn new(buffer: Vec<Vec<u8>>) -> Self {
+        Self {
+            height: buffer.len(),
+            width: buffer[0].len(),
+            buffer,
+        }
+    }
+
+    pub fn get(&self, p: Point) -> Option<u8> {
+        self.buffer.get(p.y).and_then(|row| row.get(p.x).copied())
+    }
+
+    pub fn neighbours(&self, p: Point) -> Vec<Point> {
+        let (x, y) = (p.x as i64, p.y as i64);
+        [
+            (x + 1, y),
+            (x + 1, y + 1),
+            (x + 1, y - 1),
+            (x, y - 1),
+            (x, y + 1),
+            (x - 1, y),
+            (x - 1, y + 1),
+            (x - 1, y - 1),
+        ]
+        .iter()
+        .filter(|(x, y)| (0..self.width as i64).contains(x) && (0..self.height as i64).contains(y))
+        .map(|(x, y)| Point {
+            x: *x as usize,
+            y: *y as usize,
+        })
+        .collect()
+    }
+
+    pub fn points(&self) -> impl Iterator<Item = (Point, u8)> {
+        self.buffer.iter().enumerate().flat_map(|(y, row)| {
+            row.iter()
+                .enumerate()
+                .map(move |(x, val)| (Point { x, y }, *val))
+        })
+    }
+}
