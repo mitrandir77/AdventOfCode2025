@@ -29,6 +29,7 @@ strum = { version = "0.27.2", features = ["derive"] }
 memoize = "0.5.1"
 fixedbitset = "0.5.7"
 memoized = "0.1.1"
+union-find-rs = "0.2.1"
 
 [[bin]]
 name = "01a"
