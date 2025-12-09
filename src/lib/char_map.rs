@@ -1,10 +1,41 @@
 // Advent of Code 2025
 // (c) 2025 Mateusz Kwapich
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Debug)]
 pub struct Point {
     pub x: usize,
     pub y: usize,
+}
+
+impl Point {
+    pub fn step_towards(&self, other: &Point) -> Self {
+        if self.x > other.x {
+            Point {
+                x: self.x - 1,
+                y: self.y,
+            }
+        } else if self.x < other.x {
+            Point {
+                x: self.x + 1,
+                y: self.y,
+            }
+        } else if self.y < other.y {
+            Point {
+                x: self.x,
+                y: self.y + 1,
+            }
+        } else if self.y > other.y {
+            Point {
+                x: self.x,
+                y: self.y - 1,
+            }
+        } else {
+            Point {
+                x: self.x,
+                y: self.y,
+            }
+        }
+    }
 }
 
 pub struct Map {
