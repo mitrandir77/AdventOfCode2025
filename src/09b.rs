@@ -22,10 +22,6 @@ enum Orientation {
 
 type Segment = (Point, Point);
 
-// fn on_segment(p: &Point, q: &Point, r: &Point) -> bool {
-//     q.x <= p.x.max(r.x) && q.x >= p.x.min(r.x) && q.y <= p.y.max(r.y) && q.y >= p.y.min(r.y)
-// }
-
 fn orientation(p: &Point, q: &Point, r: &Point) -> Orientation {
     let val = (q.y as i64 - p.y as i64) * (r.x as i64 - q.x as i64)
         - (q.x as i64 - p.x as i64) * (r.y as i64 - q.y as i64);
@@ -71,7 +67,6 @@ fn main() -> Result<()> {
         .combinations(2)
         .map(|com| {
             // two corners of the rectangle
-            // let (a, c) = (*c[0], *c[1]);
             let a = Point {
                 x: com[1].x.max(com[0].x).checked_sub(1).unwrap_or(0),
                 y: com[1].y.max(com[0].y).checked_sub(1).unwrap_or(0),

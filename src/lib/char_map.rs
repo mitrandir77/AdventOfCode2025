@@ -7,37 +7,6 @@ pub struct Point {
     pub y: usize,
 }
 
-impl Point {
-    pub fn step_towards(&self, other: &Point) -> Self {
-        if self.x > other.x {
-            Point {
-                x: self.x - 1,
-                y: self.y,
-            }
-        } else if self.x < other.x {
-            Point {
-                x: self.x + 1,
-                y: self.y,
-            }
-        } else if self.y < other.y {
-            Point {
-                x: self.x,
-                y: self.y + 1,
-            }
-        } else if self.y > other.y {
-            Point {
-                x: self.x,
-                y: self.y - 1,
-            }
-        } else {
-            Point {
-                x: self.x,
-                y: self.y,
-            }
-        }
-    }
-}
-
 pub struct Map {
     buffer: Vec<Vec<u8>>,
     pub height: usize,
