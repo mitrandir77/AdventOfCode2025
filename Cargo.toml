@@ -30,6 +30,7 @@ memoize = "0.5.1"
 fixedbitset = "0.5.7"
 memoized = "0.1.1"
 union-find-rs = "0.2.1"
+memoise = "0.3.2"
 
 [[bin]]
 name = "01a"
