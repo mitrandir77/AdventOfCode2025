@@ -8,10 +8,10 @@ fn checked_sub_vec(a: &[u16], b: &[u16]) -> Option<Vec<u16>> {
     assert_eq!(a.len(), b.len());
     a.iter().zip(b).map(|(x, y)| x.checked_sub(*y)).collect()
 }
-fn add_vec(a: &[u16], b: &[u16]) -> Vec<u16> {
-    assert_eq!(a.len(), b.len());
-    a.iter().zip(b).map(|(x, y)| *x + *y).collect()
-}
+// fn add_vec(a: &[u16], b: &[u16]) -> Vec<u16> {
+//     assert_eq!(a.len(), b.len());
+//     a.iter().zip(b).map(|(x, y)| *x + *y).collect()
+// }
 
 fn solve_internal(
     buttons: &[Vec<u16>],
